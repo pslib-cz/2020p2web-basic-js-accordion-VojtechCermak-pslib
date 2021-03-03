@@ -234,19 +234,21 @@
             element.getElementsByTagName("input")[0].onclick = (e) =>
             {
                 
-  	            detailOnOFF(element.getElementsByClassName("detail-vypujcky-container"));
+  	            detailOnOFF(element.getElementsByClassName("detail-vypujcky-container")[0]);
                
             } 
         }
         function detailOnOFF(container)
         {
-            if(container[0].style.display == "block")
+            let height = container.scrollHeight + "px"
+            console.log(height);
+            if(container.style.height == height)
             {
-                container[0].style.display = "none";
+                container.style.height = 0;
             }
             else
             {
-                container[0].style.display = "block";
+                container.style.height = height;
             }
         }
     </script>
