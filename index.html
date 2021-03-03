@@ -234,10 +234,20 @@
             element.getElementsByTagName("input")[0].onclick = (e) =>
             {
                 
-  	            let container = element.getElementsByClassName("detail-vypujcky-container");
-                container[0].style.display = "block";
-                console.log("open");
+  	            detailOnOFF(element.getElementsByClassName("detail-vypujcky-container"));
+               
             } 
+        }
+        function detailOnOFF(container)
+        {
+            if(container[0].style.display == "block")
+            {
+                container[0].style.display = "none";
+            }
+            else
+            {
+                container[0].style.display = "block";
+            }
         }
     </script>
 </body>
