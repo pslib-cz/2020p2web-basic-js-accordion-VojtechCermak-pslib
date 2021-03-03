@@ -81,7 +81,7 @@
                                     class="icon-edit-pen"></span></a>
                             <a class="icon-active-desktop" href="#"><span class="icon-delete"></span></a>
                             <label class="plus-detail-checkbox">
-                                <input type="checkbox"></input>
+                                <input type="checkbox" ></input>
                                 <span class="icon-minus checked"></span>
                                 <span class="icon-plus unchecked"></span>
                             </label>
@@ -129,7 +129,7 @@
                         <p class="vypujcka-stav stav-nevraceno uppercase">Nevráceno</p>
                         <div class="vypujcka-container-icon">
                             <label class="plus-detail-checkbox">
-                                <input type="checkbox"></input>
+                                <input type="checkbox" ></input>
                                 <span class="icon-minus checked"></span>
                                 <span class="icon-plus unchecked"></span>
                             </label>
@@ -174,7 +174,7 @@
                         <p class="vypujcka-stav stav-vraceno uppercase">Vráceno</p>
                         <div class="vypujcka-container-icon">
                             <label class="plus-detail-checkbox">
-                                <input type="checkbox"></input>
+                                <input type="checkbox" ></input>
                                 <span class="icon-minus checked"></span>
                                 <span class="icon-plus unchecked"></span>
                             </label>
@@ -225,6 +225,21 @@
             </div>
         </footer>
     </div>
+    <script>
+        let prvky = document.getElementsByClassName("vypujcka-item")
+        //prvky[0].getElementsByTagName("input")[0].onclick = (e) => {console.log("click");}
+        for(let element of prvky)
+        {
+            console.log(element);
+            element.getElementsByTagName("input")[0].onclick = (e) =>
+            {
+                
+  	            let container = element.getElementsByClassName("detail-vypujcky-container");
+                container[0].style.display = "block";
+                console.log("open");
+            } 
+        }
+    </script>
 </body>
 
 </html>
